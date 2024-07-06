@@ -22,12 +22,12 @@ Third project for freeCodeCamp's **JavaScript Data Structures &amp; Algorithms**
 
 ## User Stories:
 
-1. You should have an `input` element with an `id` of `"user-input"`
-2. You should have a `button` element with an `id` of `"check-btn"`
-3. You should have a `button` element with an `id` of `"clear-btn"`
-4. You should have a `div`, `span` or `p` element with an `id` of `"results-div"`
-5. When you click on the `#check-btn` element without entering a value into the `#user-input` element, an alert should appear with the text `"Please provide a phone number"`
-6. When you click on the `#clear-btn` element, the content within the `#results-div` element should be removed
+1. You should have an `input` element with an `id` of `"user-input"` √
+2. You should have a `button` element with an `id` of `"check-btn"` √
+3. You should have a `button` element with an `id` of `"clear-btn"` √
+4. You should have a `div`, `span` or `p` element with an `id` of `"results-div"` √
+5. When you click on the `#check-btn` element without entering a value into the `#user-input` element, an alert should appear with the text `"Please provide a phone number"` √
+6. When you click on the `#clear-btn` element, the content within the `#results-div` element should be removed √
 7. When the `#user-input` element contains `1 555-555-5555` and the `#check-btn` element is clicked, the `#results-div` element should contain the text `"Valid US number: 1 555-555-5555"`
 8. When the `#user-input` element contains `1 (555) 555-5555` and the `#check-btn` element is clicked, the `#results-div` element should contain the text `"Valid US number: 1 (555) 555-5555"`
 9. When the `#user-input` element contains `5555555555` and the `#check-btn` element is clicked, the `#results-div` element should contain the text `"Valid US number: 5555555555"`
