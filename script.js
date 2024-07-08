@@ -27,20 +27,22 @@ console.log(testNum, testNum.match(testRegEx))
 // console.log(testNum2, testNum2.match(testRegEx))
 console.log(testNum3, testNum3.match(testRegEx))
 console.log(testNum4, testNum4.match(testRegEx))
-console.log(testBadNum, testBadNum.match(regexExclude))
-console.log(testBadNum.match(regexExclude) ? "bad chars" : "chars good")
+// console.log(testBadNum, testBadNum.match(regexExclude))
+// console.log(testBadNum.match(regexExclude) ? "bad chars" : "chars good")
 
 
 
 const checkInput = (e) => {
     if (!input.value) {
         alert("Please provide a phone number");
-    } else if (input.value.length < 10 || input.value.length > 16) {
+    } else if (input.value.length < 10 || input.value.length > 16 || input.value.match(testRegEx === null)) {
         alert("Please enter a valid US number")
+        console.log("invalid number")
     }
 };
 
 const clear = () => {
+    input.value = ""
     results.textContent = ""
 }
 
