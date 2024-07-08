@@ -10,10 +10,10 @@ const testNum3 = "1 555-555-5555"
 const testNum4 = "555-5555"
 // console.log(testNum.match(regex))
 
-const testRegEx = /([+\s]?)(1?)([\(-\s\d]{3})/g
+const testRegEx = /([\+\s]?)(1?)([\(-\s)]?)(\d{3})([\)-\s)])(\d{4})/g
 
 console.log(testNum, testNum.match(testRegEx))
-console.log(testNum, testNum.replace("+", ""))
+// console.log(testNum, testNum.replace("+", ""))
 console.log(testNum2, testNum2.match(testRegEx))
 console.log(testNum3, testNum3.match(testRegEx))
 console.log(testNum4, testNum4.match(testRegEx))
