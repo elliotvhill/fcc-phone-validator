@@ -39,7 +39,7 @@ const checkInput = (e) => {
         results.innerText = `Invalid US number: ${input.value}`
         console.log("invalid number")
     } else {
-        results.innerText = `${input.value} is a valid US phone number`
+        results.innerText = `Valid US number: ${input.value}`
         console.log(`${input.value} is a valid US phone number`)
     }
 };
