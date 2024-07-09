@@ -5,7 +5,7 @@ const results = document.getElementById("results-div");
 const numRegex = new RegExp("/(\d)?/g")
 // const regex = /([+\s]?)?([1\s-\()]?)(\d)*?([-\s)])(\d)/g
 const testNum = "+ 1(203) 123-4567";
-const testNum2 = "+1-2031234567";
+const testNum2 = "+1-2031234567"; // √
 // const testNum3 = "1 555-555-5555"
 // const testNum3 = "1-555-555-5555" // √
 // const testNum4 = "1 555 555 5555" // √
@@ -16,7 +16,7 @@ const testNum2 = "+1-2031234567";
 // const testRegEx = /(\+)?(\s)?([1])?([\(\-\s)]?)(\d)+([\)-\s)])(\d{4})/g
 // const testRegEx = /\+?(\s)?(1?)([\s\(\-)])/g
 
-const testRegEx = /1?(^[\s-])?\d{3}[\s-]?\d{3}[\s-]?\d{4}/g // 10 digits w/ " "'s OR "-"'s OR no spaces √
+const testRegEx = /(^\+)?(\s)?1?(^[\s-\(])?(\d{3}[\s-\)])?\d{3}[\s-]?\d{4}/g // 10 digits w/ " "'s OR "-"'s OR no spaces OR "(" OR ")" √
 
 const regexExclude = /[^\&\$\%\@]/g
 const testBadNum = "1$389%012340"
@@ -40,6 +40,7 @@ const checkInput = (e) => {
         console.log("invalid number")
     } else {
         results.innerText = `${input.value} is a valid US phone number`
+        console.log(`${input.value} is a valid US phone number`)
     }
 };
 
