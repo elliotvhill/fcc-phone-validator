@@ -36,7 +36,7 @@ const checkInput = (e) => {
     if (!input.value) {
         alert("Please provide a phone number");
     } else if (input.value.length < 10 || input.value.length > 16 || !input.value.match(testRegEx)) {
-        alert("Please enter a valid US number")
+        results.innerText = `Invalid US number: ${input.value}`
         console.log("invalid number")
     } else {
         results.innerText = `${input.value} is a valid US phone number`
