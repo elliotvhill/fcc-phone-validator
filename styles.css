@@ -93,6 +93,11 @@
     justify-content: center;
   }
   
+  button {
+    padding: 0.5em;
+    border-radius: 12px;
+  }
+
   .btn-styles {
     cursor: pointer;
     width: 100px;
