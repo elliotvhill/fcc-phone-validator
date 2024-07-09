@@ -109,6 +109,9 @@
     overflow-y: auto;
     height: 265px;
     width: 100%;
+    color: #fff;
+    margin: 1rem;
+    padding: 1em;
   }
   
   .results-text {
