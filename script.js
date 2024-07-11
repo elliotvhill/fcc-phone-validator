@@ -8,7 +8,8 @@ const testNum = "+ 1(203) 123-4567";
 const testNum2 = "+1-2031234567"; // √
 
 
-const testRegEx = /(\+?)(1*)([\s-])?([^\&\$\%\@\#\.])(\(\d{3}\))*(\d{3})([\s-])?(\d{4})[^\&\$\%\@\#\.]/g
+// const testRegEx = /(\+?)(1+)([\s-])?([^\&\$\%\@\#\.])(\(\d{3}\))*(\d{3})([\s-])?(\d{4})[^\&\$\%\@\#\.]/g
+const testRegEx = /(\+?1)?([\s-\(]?\s?)(\d{3})([\s-\)]?\s?)(\d{4})/g
 const areaCodes = /(\(\d{3}\))/g // correctly matches "(" and ")" -- both needed
 
 const regexExclude = /[^\&\$\%\@.]/g
