@@ -5,6 +5,9 @@ const results = document.getElementById("results-div");
 // const numRegex = new RegExp("/(\d)?/g")
 const regex = /(\+)?(\s)?([1\s])?([\s\(\-\s)])?(\d{3})([\)\-\s)][\s])?(\d{4})/g
 
+// 12345678900
+
+const simpleDigitsRegex = /(?<=[\+\s1])\d{10,11}/g // "1" CC required, rejects other CCs
 
 const testRegEx = /\+?1*[\s\-]?\(?\d{3}\)\4?[\s\-]?\d{3}[\s\-]?\d{4}/g // closest so far
 const areaCodes = /(\(\d{3}\))/g // correctly matches "(" and ")" -- both needed
@@ -16,12 +19,13 @@ const testBadNum = "1$389%012340"
 const checkInput = (e) => {
     if (!input.value) {
         alert("Please provide a phone number");
-    } else if (input.value.length < 10 || input.value.length > 16 || !input.value.match(testRegEx)) {
-        results.innerText = `Invalid US number: ${input.value}`
-        console.log("invalid number:", input.value)
-    } else {
+    // } else if (input.value.length < 10 || input.value.length > 16 || !input.value.match(testRegEx)) {
+    } else if (input.value.length >= 10 && input.value.length <= 16 && input.value.match(simpleDigitsRegex)) {
         results.innerText = `Valid US number: ${input.value}`
-        console.log(`${input.value} is a valid US phone number`)
+        console.log("Valid number:", input.value)
+    } else {
+        results.innerText = `Invalid US number: ${input.value}`
+        console.log(`Invalid US number: ${input.value}`)
     }
 };
 
