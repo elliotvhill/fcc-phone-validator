@@ -14,10 +14,8 @@ const checkInput = () => {
         input.value.match(regex)
     ) {
         results.innerText = `Valid US number: ${input.value}`;
-        console.log("Valid number:", input.value);
     } else {
         results.innerText = `Invalid US number: ${input.value}`;
-        console.log(`Invalid US number: ${input.value}`);
     }
 };
 
